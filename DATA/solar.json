@@ -1,0 +1,93 @@
+{
+    "star": "Sun",
+    "innerplanets": [
+        {
+            "name":"Mercury",
+            "moons": null
+        },
+        {
+            "name":"Venus",
+            "moons": null
+        },
+        {
+            "name":"Earth",
+            "moons": [
+                "moon"
+            ]
+        },
+        {
+            "name":"Mars",
+            "moons": [
+                "Deimos",
+                "Phobos"
+            ]
+        }
+    ],
+    "asteroids": [
+        "Ceres",
+        "Pallas",
+        "Juno",
+        "Vesta"
+    ],
+    "outerplanets": [
+        {
+            "name":"Jupiter",
+            "moons": [
+                "Metis",
+                "Adrastea",
+                "Amalthea",
+                "Thebe",
+                "Io",
+                "Europa",
+                "Gannymede",
+                "Callista",
+                "Themisto",
+                "Himalia",
+                "Lysithea",
+                "Elara"
+            ]
+        },
+        {
+            "name":"Saturn",
+            "moons": [
+                "Rhea",
+                "Hyperion",
+                "Titan",
+                "Iapetus",
+                "Mimas",
+                "Enceladus",
+                "Tethys",
+                "Dione",
+                "Enceladus"
+            ]
+        },
+        {
+            "name":"Uranus",
+            "moons": [
+                "Ariel",
+                "Umbriel",
+                "Miranda",
+                "Titania",
+                "Oberon"
+            ]
+        },
+        {
+            "name":"Neptune",
+            "moons": [
+                "Triton",
+                "Nereid",
+                "Proteus"
+            ]
+        }
+    ],
+    "dwarfplanets": [
+        {
+            "name":"Pluto",
+            "moons":[
+                "Charon",
+                "Hydra",
+                "Nix"
+            ]
+        }
+    ]
+}
