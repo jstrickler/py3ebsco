@@ -1,12 +1,23 @@
 #!/usr/bin/env python
 
+def main():
+    k = Knight("Arthur")
+    print(k.name, k.favorite_color, k.comment, k.title)
+    try:
+        k2 = Knight("Randolph")
+    except UnknownKnightError as e:
+        print(e)
+
 class UnknownKnightError(Exception):
     pass
 
 
-class Knight(object):
+class Knight():
     def __init__(self, name):
         self._name = name
+        self.get_knight_data()
+
+    def get_knight_data(self):
         with open('../DATA/knights.txt') as knights_in:
             for line in knights_in:
                 (name, title, color, quest, comment) = line.rstrip(
@@ -43,9 +54,4 @@ class Knight(object):
 
 
 if __name__ == "__main__":
-    k = Knight("Arthur")
-    print(k.name, k.favorite_color, k.comment, k.title)
-    try:
-        k2 = Knight("Randolph")
-    except UnknownKnightError as e:
-        print(e)
+    main()
