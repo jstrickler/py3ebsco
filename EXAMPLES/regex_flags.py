@@ -14,10 +14,10 @@ officia deserunt Y45 mollit anim id est laborum"""
 pattern = r'[A-Z]\d{2,3}'
 
 if re.search(pattern, s, re.IGNORECASE):  # <1>
-    print("Found pattern.")  
+    print("Found pattern.")
 print()
 
-m = re.search(pattern, s, re.I)  # <2>
+m = re.search(pattern, s, re.I | re.X)  # <2>
 if m:
     print("Found:", m.group())
 print()
@@ -28,3 +28,18 @@ print()
 
 matches = re.findall(pattern, s, re.I)
 print("matches:",  matches)
+
+
+rx2 = re.compile(r'\d{3}  - \d{2}  - \d{4}') # , re.X)
+
+
+
+
+
+
+
+
+
+
+
+

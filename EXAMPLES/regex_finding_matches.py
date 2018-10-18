@@ -11,10 +11,10 @@ voluptate velit esse cillum dolore U901 eu fugiat nulla pariatur.
 Excepteur sint occaecat A110 cupidatat non proident, sunt in H332 culpa qui 
 officia deserunt Y45 mollit anim id est laborum"""
 
-pattern = r'[A-Z]\d{2,3}'  # <1>
+pattern = r'[A-Z]\d{2,3}\b'  # <1>
 
 if re.search(pattern, s):  # <2>
-    print("Found pattern.")  
+    print("Found pattern.")
 print()
 
 m = re.search(pattern, s)  # <3>
@@ -23,9 +23,23 @@ if m:
     print("Found:", m.group(0)) # <4>
 print()
 
+# def group(group_num=0):
+#     pass
+
 for m in re.finditer(pattern, s): # <5>
-    print(m.group())
+    print(m.group(), m.span(), m.start(), m.end())
 print()
 
 matches = re.findall(pattern, s)  # <6>
 print("matches:",  matches)
+
+# re.match(pattern, str)
+# re.fullmatch(pattern, str)
+
+#   ^    $    \b
+
+# all_matches = []
+# for file_name in list_of_file_names:
+#     with open(file_name) as file_in:
+#         contents = file_in.read()
+#         all_matches.extend(re.findall(my_regex, contents))

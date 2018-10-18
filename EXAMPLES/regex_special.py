@@ -15,3 +15,15 @@ pattern = r'(?P<letter>[A-Z])(?P<number>\d{2,3})'  # <1>
 for m in re.finditer(pattern, s):
     print(m.group('letter'), m.group('number')) # <2>
 
+
+p2 = r'\d+\s+\w+\s+(?:St.?|Street)'
+
+my_text = 'blah blah 123 Elm Street blah blah 456 Walnut St. blah blah'
+
+m = re.search(p2, my_text)
+print(m.group())
+print(re.findall(p2, my_text))
+
+
+
+

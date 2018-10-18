@@ -1,0 +1,40 @@
+
+   pet
+
+   p.t
+
+
+   ^\d+$
+
+   ^\s*\d+\s*$
+
+
+  "the therapist ran the lathe before he bathed"
+
+    \bthe\b
+
+
+    298502-22-8329382983992
+
+    \b\d{3}-\d{2}-\d{4}\b
+
+
+    spam.*ham
+
+
+
+    "orange red green blue purple black brown red blue purple black blue"
+
+    red.*blue
+
+    red.*?blue
+
+
+
+
+
+
+
+
+
+

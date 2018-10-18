@@ -8,7 +8,7 @@ street_name = OneOrMore(Word(alphas))
 street_type_full = oneOf('''
     Street Avenue Road Boulevard Way Court Alley Lane
 ''')
-street_type_abbr = oneOf('''St Ave Rd Blvd Ct''')
+street_type_abbr = oneOf('''St Ave Rd Blvd Ct'''.split())
 street_type = street_type_full | (street_type_abbr + Optional('.'))
 street_addr = street_num + street_name + street_type
 

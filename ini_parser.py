@@ -22,7 +22,7 @@ section_tag = start_tag + Word(alphanums)('section') + end_tag
 section = Group(section_tag + section_data + Suppress(Optional(White())))
 ini_file = OneOrMore(section)
 
-with open('application.ini') as ini_in:
+with open('DATA/application.ini') as ini_in:
     contents = ini_in.read()
 
 for section in ini_file.parseString(contents):
